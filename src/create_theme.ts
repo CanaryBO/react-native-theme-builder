@@ -5,6 +5,8 @@ import { __createUseStyle } from './hooks/use_style';
 import { __createCreateStyle } from './utils/create_style';
 import { __createUseTheme } from './hooks/use_theme';
 
+export const MISSING_THEME: any = undefined;
+
 export const MISSING_CONTEXT = () => {
   throw new Error('Missing context');
 };
@@ -13,8 +15,8 @@ export function createTheme<ThemeShape, ThemeKeys extends string>(
   props: Record<ThemeKeys, ThemeShape>
 ) {
   const Context = React.createContext<ThemeContext<ThemeKeys, ThemeShape>>({
-    activeTheme: MISSING_CONTEXT(),
-    theme: MISSING_CONTEXT(),
+    activeTheme: MISSING_THEME,
+    theme: MISSING_THEME,
     setTheme: MISSING_CONTEXT,
   });
 
