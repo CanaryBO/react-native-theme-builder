@@ -5,7 +5,7 @@ Simple way to create themes and use them inside the application
 ## Installation
 
 ```sh
-npm install @canarybo/react-native-theme-builder
+npm install react-native-theme-builder
 ```
 
 ## Usage
