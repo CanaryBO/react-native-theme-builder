@@ -66,6 +66,8 @@ Change the theme
 ```js
 const Component = () => {
   const { theme, setTheme } = useTheme();
+  const styles = useStyle([containerStyles, textStyles]);
+
   return (
       <View style={styles.container}>
         <Text style={styles.text}>Hello World</Text>
